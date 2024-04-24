@@ -8,3 +8,25 @@
 .httr-oauth
 .DS_Store
 .quarto
+
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.DS_Store
+.httr-oauth
+.Rprofile
+images/*.mov
+images/dec27_ride_video.mov
+script.txt
+.script
+script.*
+script
+quarto formatting notes.txt
+.quarto formatting notes
+quarto formatting notes.*
+quarto formatting notes
+images/dec27_ride_shoulderpostop.jpeg
+images/dec27_ride_hospital.jpeg
+images/dec27_ride_hospital2.jpeg
+images/dec27_ride_hipscan.jpeg

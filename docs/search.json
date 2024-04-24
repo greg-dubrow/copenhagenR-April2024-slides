@@ -1,9 +1,366 @@
 [
   {
-    "objectID": "copenhagenR-April2024-slides.html",
-    "href": "copenhagenR-April2024-slides.html",
+    "objectID": "copenhagenR-April2024-slides.html#section",
+    "href": "copenhagenR-April2024-slides.html#section",
     "title": "copenhagenR-April2024-slides",
     "section": "",
-    "text": "slides for the talk\ncopenhagenR-April2024-slides"
+    "text": "My Year of Riding Danishly\n\n\n\n\nGregers Kjerulf Dubrow\n\n\n\nCopenhagenR\n\n\n\n23 April, 2024"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#section-1",
+    "href": "copenhagenR-April2024-slides.html#section-1",
+    "title": "copenhagenR-April2024-slides",
+    "section": "",
+    "text": "My Year of Riding Danishly\n\n\n\n\n\n\nlibrary(gregbio)\nmy_life &lt;- blev_født(danmark) %&gt;%"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#section-2",
+    "href": "copenhagenR-April2024-slides.html#section-2",
+    "title": "copenhagenR-April2024-slides",
+    "section": "",
+    "text": "My Year of Riding Danishly\n\n\n\n\n\n\nlibrary(gregbio)\nmy_life &lt;- blev_født(danmark) %&gt;% \n        voksede_op(USA, \n            state = “Pennsylvania”, \n            city = “Philadelphia) %&gt;%\n         undergrad_degree(film_major) %&gt;%\n         PhD(education_policy) %&gt;%"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#section-3",
+    "href": "copenhagenR-April2024-slides.html#section-3",
+    "title": "copenhagenR-April2024-slides",
+    "section": "",
+    "text": "My Year of Riding Danishly\n\n\n\n\n\n\nlibrary(gregbio)\nmy_life &lt;- blev_født(danmark) %&gt;% \n        voksede_op(USA, \n            state = “Pennsylvania”, \n            city = “Philadelphia) %&gt;%\n         undergrad_degree(film_major) %&gt;%\n         PhD(education_policy) %&gt;% \n         career = case_when(\n             job = faculty ~ FIU, (set_location as Miami, FL)"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#section-4",
+    "href": "copenhagenR-April2024-slides.html#section-4",
+    "title": "copenhagenR-April2024-slides",
+    "section": "",
+    "text": "My Year of Riding Danishly\n\n\n\n\n\n\nlibrary(gregbio)\nmy_life &lt;- blev_født(danmark) %&gt;% \n        voksede_op(USA, \n            state = “Pennsylvania”, \n            city = “Philadelphia) %&gt;%\n         undergrad_degree(film_major) %&gt;%\n         PhD(education_policy) %&gt;% \n         career = case_when(\n             job = faculty ~ FIU, (set_location as Miami, FL),\n             job = data_analyst ~ UC Berkeley & SFSU,   \n             (set_location as SF Bay Area)"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#section-5",
+    "href": "copenhagenR-April2024-slides.html#section-5",
+    "title": "copenhagenR-April2024-slides",
+    "section": "",
+    "text": "My Year of Riding Danishly\n\n\n\n\n\n\nlibrary(gregbio)\nmy_life &lt;- blev_født(danmark) %&gt;% \n        voksede_op(USA, \n            state = “Pennsylvania”, \n            city = “Philadelphia) %&gt;%\n         undergrad_degree(film_major) %&gt;%\n         PhD(education_policy) %&gt;% \n         career = case_when(\n             job = faculty ~ FIU, (set_location as Miami, FL),\n             job = data_analyst ~ UC Berkeley & SFSU,   \n             (set_location as SF Bay Area),\n             job = career_swerve1 ~ freelance_ESL_teacher,\n             (set_location as Lyon, FR)"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#section-6",
+    "href": "copenhagenR-April2024-slides.html#section-6",
+    "title": "copenhagenR-April2024-slides",
+    "section": "",
+    "text": "My Year of Riding Danishly\n\n\n\n\n\n\nlibrary(gregbio)\nmy_life &lt;- blev_født(danmark) %&gt;% \n        voksede_op(USA, \n            state = “Pennsylvania”, \n            city = “Philadelphia) %&gt;%\n         undergrad_degree(film_major) %&gt;%\n         PhD(education_policy) %&gt;% \n         career = case_when(\n             job = faculty ~ FIU, (set_location as Miami, FL),\n             job = data_analyst ~ UC Berkeley & SFSU,   \n             (set_location as SF Bay Area),\n             job = career_swerve1 ~ freelance_ESL_teacher,\n             (set_location as Lyon, FR) \n             job = career_swerve2 ~ \n             study_abroad_student_services, \n             (set_location as København, DK)))"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#section-7",
+    "href": "copenhagenR-April2024-slides.html#section-7",
+    "title": "copenhagenR-April2024-slides",
+    "section": "",
+    "text": "My Year of Riding Danishly\n\n\n\nhttps://www.gregdubrow.io/posts/my-year-of-riding-danishly/"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#the-plan",
+    "href": "copenhagenR-April2024-slides.html#the-plan",
+    "title": "copenhagenR-April2024-slides",
+    "section": "The plan…",
+    "text": "The plan…\n\n\nPull the Data\n\nVia bulk download, the Strava API, and rStrava package.\n\n\n\nEDA with DataExplorer\n\nShow and run code for exploratory analysis (EDA) using the DataExplorer package.\n\n\n\nEDA with Automated Scatterplots\n\nShow and run code for EDA using Cedric Scherer’s tutorial on automating plots.\n\n\n\nTables with gt\n\nShow and run code for the tables, including how to align gt tables next to each other.\n\n\n\nCreate Charts to Describe My Ride Data\n\nShow and run the ggplot code to make some pretty charts.\n\n\n\nRegression Models\n\nRun a few regression models to explain ride outcomes."
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#what-is-strava",
+    "href": "copenhagenR-April2024-slides.html#what-is-strava",
+    "title": "copenhagenR-April2024-slides",
+    "section": "What is Strava?",
+    "text": "What is Strava?\n\n\n\n\n\n\n\nApp & data platform to track physical exercise - mostly cycling, running, and walking/hiking.\n\n\n\n\n\n\nUses Global Positioning System (GPS) to plot routes.\n\n\n\n\n\n\nSocial media features, including following other users, adding photos to activity posts, giving kudos to other users on their activities…\n\n\n\n\n\n\nName derived from Swedish word for “strive” - sträva"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#pulling-the-data---bulk-download",
+    "href": "copenhagenR-April2024-slides.html#pulling-the-data---bulk-download",
+    "title": "copenhagenR-April2024-slides",
+    "section": "Pulling the data - Bulk download",
+    "text": "Pulling the data - Bulk download\n\nBulk download includes folder with all activities in GPX (GPS Exchange Format) files to build your own maps."
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#pulling-the-data---api",
+    "href": "copenhagenR-April2024-slides.html#pulling-the-data---api",
+    "title": "copenhagenR-April2024-slides",
+    "section": "Pulling the data - API",
+    "text": "Pulling the data - API\n\nSign up in your account, project can be anything you want."
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#pulling-the-data---api-1",
+    "href": "copenhagenR-April2024-slides.html#pulling-the-data---api-1",
+    "title": "copenhagenR-April2024-slides",
+    "section": "Pulling the data - API",
+    "text": "Pulling the data - API"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#pulling-the-data---rstrava-package",
+    "href": "copenhagenR-April2024-slides.html#pulling-the-data---rstrava-package",
+    "title": "copenhagenR-April2024-slides",
+    "section": "Pulling the data - rStrava package",
+    "text": "Pulling the data - rStrava package\n\nhttps://github.com/fawda123/rStrava"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#lets-load-the-csv-data",
+    "href": "copenhagenR-April2024-slides.html#lets-load-the-csv-data",
+    "title": "copenhagenR-April2024-slides",
+    "section": "Let’s load the CSV data",
+    "text": "Let’s load the CSV data\n\nlibrary(tidyverse) # to do tidyverse things\nlibrary(tidylog) # to get a log of what's happening to the data\nlibrary(janitor) # tools for data cleaning\n\nstrava_activities &lt;- readr::read_csv(\"data/activities.csv\") %&gt;%\n    clean_names() %&gt;%\n    as_tibble() %&gt;%\n    rename(elapsed_time = elapsed_time_6, distance = distance_7, max_heart_rate = max_heart_rate_8,\n                 relative_effort = relative_effort_9, commute = commute_10, elapsed_time2 = elapsed_time_16,\n                 distance2 = distance_18, relative_effort2 = relative_effort_38, commute2 = commute_51)"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#too-much-date-time-wrangling",
+    "href": "copenhagenR-April2024-slides.html#too-much-date-time-wrangling",
+    "title": "copenhagenR-April2024-slides",
+    "section": "Too much date & time wrangling",
+    "text": "Too much date & time wrangling\n\nmutate(activity_date = str_replace(activity_date, \"Jan \", \"January \")) \n\nseparate('activity_date', paste(\"date\", 1:3, sep=\"_\"), sep=\",\", extra=\"drop\") \n\nmutate(activity_md = str_trim(date_1)) \n\nseparate('activity_md', paste(\"activity_md\", 1:2, sep=\"_\"), sep=\" \", extra=\"drop\") \n\nmutate(activity_mdy = paste0(date_1, \",\", date_2)) \n\nmutate(activity_ymd = lubridate::mdy(activity_mdy)) \n\nmutate(activity_tz = case_when(activity_ymd &gt;= \"2022-06-28\" ~ \"Europe/Copenhagen\",\n    TRUE ~ \"US/Pacific\")) \n\n\n\n\nOk, time to try the API…or wait…is there a package?"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#using-the-rstrava-package---authorization",
+    "href": "copenhagenR-April2024-slides.html#using-the-rstrava-package---authorization",
+    "title": "copenhagenR-April2024-slides",
+    "section": "Using the rStrava package - Authorization",
+    "text": "Using the rStrava package - Authorization\nIn a separate file called stoken.r, I create the access token to call in the script that pulls the data.\n\nlibrary(rStrava)\napp_name &lt;- 'Year of Riding Danishly' # chosen by user\napp_client_id  &lt;- '---' # an integer, assigned by Strava\napp_secret &lt;- '---' # an alphanumeric secret, assigned by Strava\n\n# create the authentication token - cache = TRUE saves it in the working directory\nstoken &lt;- httr::config(token = strava_oauth(\n    app_name, app_client_id, app_secret, \n    app_scope=\"activity:read_all\", cache = TRUE))\n\nstoken object is a list:"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#using-the-rstrava-package---get-the-data",
+    "href": "copenhagenR-April2024-slides.html#using-the-rstrava-package---get-the-data",
+    "title": "copenhagenR-April2024-slides",
+    "section": "Using the rStrava package - Get the data",
+    "text": "Using the rStrava package - Get the data\n\n## call the OAuth access token \nstoken &lt;- httr::config(token = readRDS('.httr-oauth')[[1]])\n\n## invoke stoken to get data\nmyact &lt;- get_activity_list(stoken)\n\nReturns a list of activities requested"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#using-the-rstrava-package---get-the-data-1",
+    "href": "copenhagenR-April2024-slides.html#using-the-rstrava-package---get-the-data-1",
+    "title": "copenhagenR-April2024-slides",
+    "section": "Using the rStrava package - Get the data",
+    "text": "Using the rStrava package - Get the data\n\n act_data &lt;- compile_activities(myact) %&gt;%\n    as_tibble() %&gt;%\n    glimpse()"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#clean-prep-the-data",
+    "href": "copenhagenR-April2024-slides.html#clean-prep-the-data",
+    "title": "copenhagenR-April2024-slides",
+    "section": "Clean & prep the data",
+    "text": "Clean & prep the data\n\nact_data &lt;- compile_activities(myact) %&gt;%\n    as_tibble() %&gt;%\n    mutate(gear_name = case_when(gear_id == \"b6298198\" ~ \"Univega\",\n                                 gear_id == \"b11963967\" ~ \"Commute bike\", TRUE ~ \"Not a bike ride\")) %&gt;%\n    mutate(activity_date = lubridate::as_datetime(start_date_local)) %&gt;%\n    mutate(activity_date_p = as.Date(start_date_local)) %&gt;%\n    mutate(activity_year = lubridate::year(start_date_local),\n           activity_month = lubridate::month(start_date_local),\n           activity_month_t = lubridate::month(start_date_local, label = TRUE, abbr = FALSE),\n           activity_day = lubridate::day(start_date_local),\n           activity_md =    paste0(activity_month_t, \" \", activity_day),\n           activity_wday = wday(activity_date_p, label = TRUE, abbr = FALSE),\n           activity_hour = lubridate::hour(activity_date),\n           activity_min = lubridate::minute(activity_date),\n           activity_hmt = paste0(activity_hour, \":\", activity_min),\n           activity_hm = hm(activity_hmt),\n           moving_time_hms = hms::hms(moving_time),\n           elapsed_time_hms = hms::hms(elapsed_time)) %&gt;%\n    mutate(location_country = case_when(\n        timezone == \"(GMT+01:00) Europe/Copenhagen\" ~ \"Denmark\",\n        timezone == \"(GMT+01:00) Europe/Paris\" ~ \"France\", TRUE ~ \"United States\")) %&gt;%\n## random edits\n    mutate(commute = ifelse((activity_year == 2023 & activity_md == \"June 14\" & name == \"Morning commute\"),\n                                    TRUE, commute))\n\n## merge with variables from CSV but not in API\nact_data_csv_ext &lt;- act_data_csv %&gt;%\n    select(activity_id, calories, average_grade, max_grade, average_elapsed_speed, elevation_loss)\n\nstrava_activities_final &lt;- act_data %&gt;%\n    merge(act_data_csv_ext) %&gt;%\n    select(activity_id:max_speed, average_elapsed_speed, elevation_gain, elevation_loss, elevation_high, elevation_low,\n                 average_grade, max_grade, location_country:lng_end, average_watts, calories, kilojoules)"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#lets-do-some-eda",
+    "href": "copenhagenR-April2024-slides.html#lets-do-some-eda",
+    "title": "copenhagenR-April2024-slides",
+    "section": "Let’s do some EDA",
+    "text": "Let’s do some EDA\n\n\nlibrary(DataExplorer) # for EDA\n\nplot_intro(strava_data)\nplot_missing(strava_data)"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#quick-asidesome-terms-that-need-defining",
+    "href": "copenhagenR-April2024-slides.html#quick-asidesome-terms-that-need-defining",
+    "title": "copenhagenR-April2024-slides",
+    "section": "Quick aside…some terms that need defining",
+    "text": "Quick aside…some terms that need defining\n\nSome are obvious (distance in km), these maybe less so…\n\n\nElapsed time: When I hit “start” on the app to when I hit “stop”.\n\n\n\n\nMoving time: App’s caclulation of how much time was spent in motion.\n\n\n\n\nGrade: Rise (elevation) divided by run (distance), x 100\n\n\n\n\nWatts: A measurement of power. Strava incorporates rider weight, bike weight, bike type, gradients and speed.\n\n\n\n\nCalories: Total energy expended in the time it took to do the workout.\n\n\n\n\nKilojoules: Energy burned by the workout. Formula for kilojoules is (watts x seconds) x 1000."
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#lets-do-some-eda---correlations",
+    "href": "copenhagenR-April2024-slides.html#lets-do-some-eda---correlations",
+    "title": "copenhagenR-April2024-slides",
+    "section": "Let’s do some EDA - Correlations!",
+    "text": "Let’s do some EDA - Correlations!\n\nstrava_data %&gt;%\n    select(distance_km, elapsed_time, moving_time, max_speed, average_speed, elevation_gain, elevation_loss, elevation_low,\n                 elevation_high, average_grade, max_grade, average_watts, calories, kilojoules) %&gt;%\n    filter(!is.na(average_watts)) %&gt;%\n    filter(!is.na(calories)) %&gt;%\n    plot_correlation(maxcat = 5L, type = \"continuous\", geom_text_args = list(\"size\" = 4))\n\n\n\n\n\nSo what do we see here?\n\nMost of the relationships are positive, some with expectedly near 1:1 relationships, such as distance (in km) and total time for the ride.\nAverage speed is positively correlated with distance but the relationship is only at 0.14, the weakest of all positive associations with distance. Average speed correlations are low…near 0, for total elevation gain and negative the higher the average grade of the ride.\nAverge watts, or weighted power output for the ride, has mostly negative correlations. Longer rides in time or distance meant a lower average power per ride segment.\n\nWe’ll keep these correlations in mind when looking at the scatterplots and then later considering the regression results."
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#more-eda---scatterplots",
+    "href": "copenhagenR-April2024-slides.html#more-eda---scatterplots",
+    "title": "copenhagenR-April2024-slides",
+    "section": "More EDA - Scatterplots!",
+    "text": "More EDA - Scatterplots!\n\n\nDataExplorer has functionality for scatterplots, but each call only allows for one comparison y-axis variable & not much customization to the output, like a smoothing line.\n\n\nplot_scatterplot(strava_data_filter, by = \"distance_km\", nrow = 6L)"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#more-eda---better-scatterplots",
+    "href": "copenhagenR-April2024-slides.html#more-eda---better-scatterplots",
+    "title": "copenhagenR-April2024-slides",
+    "section": "More EDA - Better scatterplots!",
+    "text": "More EDA - Better scatterplots!\n\nhttps://www.cedricscherer.com/2023/07/05/efficiency-and-consistency-automate-subset-graphics-with-ggplot2-and-purrr/\n\n\nplot_scatter_lm &lt;- function(data, var1, var2, pointsize = 2, transparency = .5, color = \"\") {\n    ## check if inputs are valid\n    if (!exists(substitute(data))) stop(\"data needs to be a data frame.\")\n    if (!is.data.frame(data)) stop(\"data needs to be a data frame.\")\n    if (!is.numeric(pull(data[var1]))) stop(\"Column var1 needs to be of type numeric, passed as string.\")\n    if (!is.numeric(pull(data[var2]))) stop(\"Column var2 needs to be of type numeric, passed as string.\")\n    if (!is.numeric(pointsize)) stop(\"pointsize needs to be of type numeric.\")\n    if (!is.numeric(transparency)) stop(\"transparency needs to be of type numeric.\")\n    if (color != \"\") { if (!color %in% names(data)) stop(\"Column color needs to be a column of data, passed as string.\") }\n\n    g &lt;-\n        ggplot(data, aes(x = !!sym(var1), y = !!sym(var2))) +\n        geom_point(aes(color = !!sym(color)), size = pointsize, alpha = transparency) +\n        geom_smooth(aes(color = !!sym(color), color = after_scale(prismatic::clr_darken(color, .3))),\n                                method = \"lm\", se = FALSE) +\n        theme_minimal() +\n        theme(panel.grid.minor = element_blank(), legend.position = \"top\")\n\n    if (color != \"\") {\n        if (is.numeric(pull(data[color]))) {\n            g &lt;- g + scale_color_viridis_c(direction = -1, end = .85) +\n                guides(color = guide_colorbar(\n                    barwidth = unit(12, \"lines\"), barheight = unit(.6, \"lines\"), title.position = \"top\"))\n        } else {g &lt;- g + scale_color_brewer(palette = \"Set2\")}\n    }\n    return(g)\n}"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#more-eda---better-scatterplots-1",
+    "href": "copenhagenR-April2024-slides.html#more-eda---better-scatterplots-1",
+    "title": "copenhagenR-April2024-slides",
+    "section": "More EDA - Better scatterplots!",
+    "text": "More EDA - Better scatterplots!\n\n## 1st plot call - distance as y axis\npatchwork::wrap_plots(\n    map2(c(\"elapsed_time\", \"moving_time\", \"average_speed\",\"average_watts\", \"calories\", \"kilojoules\"), \n             c(\"distance_km\", \"distance_km\", \"distance_km\", \"distance_km\", \"distance_km\", \"distance_km\"), \n             ~plot_scatter_lm(data = strava_activities_rides, var1 = .x, var2 = .y, pointsize = 3.5) + \n                theme(plot.margin = margin(rep(15, 4)))))\n\n\n\n\n\n\nConfirms what we saw in the correlation heatmap & displays ride distributions.\nPositive and almost 1:1 relationships between distance and both time measures, elapsed and moving.\nNegative association with watts that we saw in the correlations. Making a note to take a closer look at how much an effect watts has later on in the regression section.\nNote the outlier ride of 60km and an elapsed time of more than 15,000 seconds…more about that one later."
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#a-few-more-scatterplots",
+    "href": "copenhagenR-April2024-slides.html#a-few-more-scatterplots",
+    "title": "copenhagenR-April2024-slides",
+    "section": "A few more scatterplots",
+    "text": "A few more scatterplots\n\n\n\n\n\n\n\n\n\n\n\nAverage speed decreases as ride time goes up (top left plot)…makes sense.\nExpended more energy (calories & kilojoules) as ride time increased (top left).\nSpeed & watts had strong relationship (top right), as we saw in correlation heatmap.\nSurprised energy output has weak association with average speed; perhaps here in flat Denmark there’s only so much energy burn I can hit.\nStrong relationship between kilojoules & elevation."
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#tables-with-gt",
+    "href": "copenhagenR-April2024-slides.html#tables-with-gt",
+    "title": "copenhagenR-April2024-slides",
+    "section": "Tables with gt\n",
+    "text": "Tables with gt\n\n\nlibrary(gt)\nsumtable %&gt;%\n    select(rides, km_total, elev_total, time_total1, time_total2, cal_total, kiloj_total) %&gt;%\n    gt() %&gt;%\n    fmt_number(columns = c(km_total, elev_total, cal_total, kiloj_total), decimals = 0) %&gt;%\n    cols_label(rides = \"Total Rides\", km_total = \"Total Kilometers\",\n                         elev_total = md(\"Total Elevation *(meters)*\"),\n                         time_total1 = md(\"Total Time *(hours/min/sec)*\"),\n                         time_total2 = md(\"Total Time *(days/hours/min/sec)*\"),\n                         cal_total = \"Total Calories\", kiloj_total = \"Total Kilojoules\") %&gt;%\n    cols_align(align = \"center\", columns = everything()) %&gt;%\n    tab_style(style = cell_fill(color = \"grey\"), locations = cells_body(rows = seq(1, 1, 1))) %&gt;%\n    tab_style( style = cell_text(align = \"center\"), locations = cells_column_labels(\n            columns = c(rides, km_total, elev_total, time_total1, time_total2, cal_total, kiloj_total))) %&gt;%\n    tab_header(title = md(\"My Year of Riding Danishly&lt;br&gt;*Ride Totals*\")) \n\n\n\n\n\n\nFor the year, more than 440 rides covering 2,500 kilometers.\nI spent the equivalent of more than 5 days on the bike, and burned 60,000+ units of energy. Which means on average, every day I did 1.2 rides,and went about 7 km, a few km more than the average Copenhagener. (It occurs to me know that I didn’t make a count for how many days of the year I rode…an edit to come perhaps…)"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#tables-with-gt-1",
+    "href": "copenhagenR-April2024-slides.html#tables-with-gt-1",
+    "title": "copenhagenR-April2024-slides",
+    "section": "Tables with gt\n",
+    "text": "Tables with gt\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe rides spanned 1 km to 60 km, with the average & median ride around 4-5km, which makes sense given that my work commute was a bit over 4km and rides to Danish class were ~4km or ~6km depending on location. \n\nThe elevation stats are what you’d expect for Denmark, and the average ride burned 140-150 units of energy."
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#lets-make-some-charts-with-ggplot2",
+    "href": "copenhagenR-April2024-slides.html#lets-make-some-charts-with-ggplot2",
+    "title": "copenhagenR-April2024-slides",
+    "section": "Let’s make some charts with ggplot2\n",
+    "text": "Let’s make some charts with ggplot2\n\n\nlibrary(patchwork)\nridesplot1 &lt;- rides_mth_type %&gt;%\n    ggplot(aes(activity_month_abbv, rides_by_month)) +\n    geom_col(fill = \"#C8102E\") +\n    geom_text(aes(label= rides_by_month), color = \"white\", size = 5, vjust = 1.5) +\n    labs(x = \"\", y = \"\", title = \"Spring & Summer Weather = More Rides\",\n        subtitle = glue::glue(\"*Average Rides / Month = {round(mean(rides_mth_type$rides_by_month, 3))}*\")) +\n    theme_minimal() +\n    theme(panel.grid = element_blank(), plot.title = element_text(hjust = 0.5),\n            plot.subtitle = element_markdown(hjust = 0.5),\n            axis.text.y = element_blank())\n\nridesplot2 &lt;- rides_mth_type %&gt;%\n    group_by(ride_type) %&gt;%\n    mutate(rides_by_type = sum(ride_type_n)) %&gt;%\n    ungroup() %&gt;%\n    distinct(rides_by_type, .keep_all = TRUE) %&gt;%\n    mutate(ride_type_pct = rides_by_type / sum(rides_by_type)) %&gt;%\n    {. -&gt;&gt; tmp} %&gt;%\n    ggplot(aes(ride_type, ride_type_pct)) +\n    geom_col(fill = \"#C8102E\") +\n    scale_x_discrete(labels = paste0(tmp$ride_type, \"&lt;br&gt;Total Rides = \", tmp$rides_by_type, \"\")) +\n    geom_text(data = subset(tmp, ride_type != \"Workout\"), \n        aes(label= scales::percent(round(ride_type_pct, 2))), color = \"white\", size = 5, vjust = 1.5) +\n    geom_text(data = subset(tmp, ride_type == \"Workout\"),\n        aes(label= scales::percent(round(ride_type_pct, 2))), color = \"#C8102E\", size = 5, vjust = -.5) +\n    labs(x = \"\", y = \"\", title = \"Lots of Riding to Work or Danish Class\") +\n    theme_minimal() +\n    theme(panel.grid = element_blank(), plot.title = element_text(hjust = 0.5),\n                axis.text.y = element_blank(), axis.text.x = element_markdown())\n    rm(tmp)\n    \nridesplot1 + ridesplot2"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#lets-make-some-charts-with-ggplot2-1",
+    "href": "copenhagenR-April2024-slides.html#lets-make-some-charts-with-ggplot2-1",
+    "title": "copenhagenR-April2024-slides",
+    "section": "Let’s make some charts with ggplot2\n",
+    "text": "Let’s make some charts with ggplot2"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#lets-make-some-charts-with-ggplot2-2",
+    "href": "copenhagenR-April2024-slides.html#lets-make-some-charts-with-ggplot2-2",
+    "title": "copenhagenR-April2024-slides",
+    "section": "Let’s make some charts with ggplot2\n",
+    "text": "Let’s make some charts with ggplot2\n\n\nrides_mth_type %&gt;%\n    ggplot(aes(activity_month_t, ride_type_pct, fill = ride_type)) +\n    geom_bar(stat = \"identity\") +\n    geom_text(data = subset(rides_mth_type, ride_type != \"Workout\"),\n        aes(label = scales::percent(round(ride_type_pct, 2))),\n        position = position_stack(vjust = 0.5), color= \"white\", vjust = 1, size = 5) +\n    labs(x = \"\", y = \"\", title = \"Most Rides Each Month Were Commutes to/from Work or Danish Class\") +\n    scale_fill_manual(values = c(\"#0072B2\", \"#E69F00\", \"#CC79A7\"), labels = c(\"Commute/&lt;br&gt;Studieskolen\", \"Other\", \"Workout\")) +\n    theme_minimal()+\n    theme(legend.position = \"bottom\", legend.spacing.x = unit(0, 'cm'),\n            legend.text = element_markdown(),\n            legend.key.width = unit(1.5, 'cm'), legend.title = element_blank(),\n            axis.text.y = element_blank(), plot.title = element_text(hjust = 0.5),\n        panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +\n    guides(fill = guide_legend(label.position = \"bottom\"))"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#lets-make-some-charts-with-ggplot2-3",
+    "href": "copenhagenR-April2024-slides.html#lets-make-some-charts-with-ggplot2-3",
+    "title": "copenhagenR-April2024-slides",
+    "section": "Let’s make some charts with ggplot2\n",
+    "text": "Let’s make some charts with ggplot2"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#lets-make-some-charts-with-ggplot2-4",
+    "href": "copenhagenR-April2024-slides.html#lets-make-some-charts-with-ggplot2-4",
+    "title": "copenhagenR-April2024-slides",
+    "section": "Let’s make some charts with ggplot2\n",
+    "text": "Let’s make some charts with ggplot2"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#lets-make-some-charts-with-ggplot2-5",
+    "href": "copenhagenR-April2024-slides.html#lets-make-some-charts-with-ggplot2-5",
+    "title": "copenhagenR-April2024-slides",
+    "section": "Let’s make some charts with ggplot2\n",
+    "text": "Let’s make some charts with ggplot2"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#oohhradial-plots",
+    "href": "copenhagenR-April2024-slides.html#oohhradial-plots",
+    "title": "copenhagenR-April2024-slides",
+    "section": "Oohh…radial plots",
+    "text": "Oohh…radial plots\n\nstrava_data %&gt;%\n    filter(activity_year == 2023) %&gt;%\n    count(ride_type, activity_hour) %&gt;%\n    {. -&gt;&gt; tmp} %&gt;%\n    ggplot(aes(activity_hour, y = n, fill = ride_type)) +\n    geom_bar(stat = \"identity\") +\n    scale_x_continuous(limits = c(0, 24), breaks = seq(0, 24)) +\n    geom_text(data = subset(tmp, ride_type == \"Commute/Studieskolen\" & n &gt; 20),\n        aes(label= n), color = \"white\", size = 4) +\n    coord_polar(start = 0) +\n    theme_minimal() +\n    scale_fill_manual(values = c(\"#0072B2\", \"#E69F00\", \"#CC79A7\"), labels = c(\"Commute/&lt;br&gt;Studieskolen\", \"Other\", \"Workout\")) +\n    labs(x = \"\", y = \"\",\n             title = \"Most Rides During Morning and Evening Commuting Hours\",\n             subtitle = \"*Numbers Correspond to Hour of Day on a 24 hr clock*\") +\n    theme(legend.text = element_markdown(),\n            axis.text.y = element_blank(),\n            legend.title = element_blank(),\n            plot.title = element_text(size = 10, hjust = 0.5),\n            plot.subtitle = element_markdown(hjust = 0.5, size = 9))\nrm(tmp)"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#oohhradial-plots-1",
+    "href": "copenhagenR-April2024-slides.html#oohhradial-plots-1",
+    "title": "copenhagenR-April2024-slides",
+    "section": "Oohh…radial plots",
+    "text": "Oohh…radial plots"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#oohhradial-plots-2",
+    "href": "copenhagenR-April2024-slides.html#oohhradial-plots-2",
+    "title": "copenhagenR-April2024-slides",
+    "section": "Oohh…radial plots",
+    "text": "Oohh…radial plots\n\nactivty_ampm %&gt;%\n    ggplot(aes(activity_min, y = activity_min_n, fill = ampm)) +\n    geom_col(position = position_stack(reverse = TRUE)) +\n    scale_x_continuous(limits = c(-1, 60), breaks = seq(0, 59), labels = seq(0, 59)) +\n    geom_text(data = subset(activty_ampm, activity_min_n &gt; 5),\n        aes(label= activity_min_n), color = \"white\", size = 4, position = position_nudge(y = -1)) +\n    coord_polar(start = 0) +\n    theme_minimal() +\n    scale_fill_manual(values = c(\"#E57A77\", \"#7CA1CC\"), labels = c(\"AM\", \"PM\")) +\n    labs(x = \"\", y = \"\",\n             title = \"Most Morning Rides Started Between 12 & 30 Past the Hour &lt;br&gt;\n             Evening Rides More Evenly Spaced Through the Hour\",\n             subtitle = \"*Numbers Correspond to  Minutes of the Hour*\") +\n    theme(legend.text = element_markdown(),\n            axis.text.y = element_blank(),\n            legend.title = element_blank(),\n            plot.title = element_markdown(size = 10, hjust = 0.5),\n            plot.subtitle = element_markdown(hjust = 0.5, size = 9))"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#oohhradial-plots-3",
+    "href": "copenhagenR-April2024-slides.html#oohhradial-plots-3",
+    "title": "copenhagenR-April2024-slides",
+    "section": "Oohh…radial plots",
+    "text": "Oohh…radial plots"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#regressions-with-modelsummary",
+    "href": "copenhagenR-April2024-slides.html#regressions-with-modelsummary",
+    "title": "copenhagenR-April2024-slides",
+    "section": "Regressions with modelsummary\n",
+    "text": "Regressions with modelsummary\n\n\nAfter the EDA and charts & tables, time to run some regressions to see the effect of the variables on explaining how long a ride took, how many average watts I was producing, and how much energy I burned.\nThe modelsummary package is very helpful for wrapping a bunch of functions together to help display regression statistics.\nGood support for running multiple models…pass the models into a list, and modelsummary does the rest when you call the object.\n\n\n\nlibrary(modelsummary)\nstrava_models &lt;- strava_data %&gt;%\n    filter(activity_year == 2023)\n\nride_models &lt;- list(\n    \"Time\" = lm(moving_time ~ distance_km + average_speed + elevation_gain + average_grade + average_watts,\n                            data = strava_models),\n    \"Watts\" = lm(average_watts ~ moving_time + distance_km +average_speed + elevation_gain + average_grade + kilojoules,\n                             data = strava_models),\n    \"Kilojoules\" = lm(kilojoules ~ moving_time + distance_km +average_speed + elevation_gain + average_grade + average_watts,\n                                            data = strava_models))\n\nmodelsummary(ride_models, stars = TRUE, gof_omit = \"IC|Adj|F|RMSE|Log\", output = \"gt\")\nmodelplot(ride_models, coef_omit = \"Interc\")"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#what-do-the-models-tell-us",
+    "href": "copenhagenR-April2024-slides.html#what-do-the-models-tell-us",
+    "title": "copenhagenR-April2024-slides",
+    "section": "What do the models tell us?",
+    "text": "What do the models tell us?\n\n\n\n\n\nIn the time model, each extra kilometer per ride added almost 190 seconds, or 3 minutes, to the ride. Each km/hour or average speed took about 2 minutes off a ride. It’s a bit counter-intuitive however that steeper average grades resulted in shorter rides. I’d need to dig deeper into the data to see why that might be happening.\nFor the watts model the largest effect size was average_grade, which makes sense…the steeper the ride the more power I needed to do it. Though oddly, grade had a negative effect on kilojoules burned.\nOverall the models were robust, each explaining well over 80% of variance.\nBut before we’re fully satisfied with the models, let’s do a quick check for colinearity…"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#colinearity-using-car",
+    "href": "copenhagenR-April2024-slides.html#colinearity-using-car",
+    "title": "copenhagenR-April2024-slides",
+    "section": "Colinearity using car\n",
+    "text": "Colinearity using car\n\n\n# create the data objects for the models\ncolin_time &lt;- stack(car::vif(ride_models$time))\ncolin_time &lt;- stack(car::vif(ride_models$time))\ncolin_watts &lt;- stack(car::vif(ride_models$watts))\ncolin_joules &lt;- stack(car::vif(ride_models$kilojoules))\n\n# show the results using gt (only showing the call for time model)\ncolin_time %&gt;%\n    gt() %&gt;%\n    tab_header(title = \"Colinearity - Time Model\")\n\n\n\nThere’s some problematic colinearity with moving_time and distance_km in the watts and kilojoules models, so let’s redo models removing the variables with most colinearity."
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#model-run-v2",
+    "href": "copenhagenR-April2024-slides.html#model-run-v2",
+    "title": "copenhagenR-April2024-slides",
+    "section": "Model run v2",
+    "text": "Model run v2\n\nNo need to show the code again, here’s the model summary table, and I included the original models and those with colinear variables removed so we could see the difference."
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#plotting-the-residuals",
+    "href": "copenhagenR-April2024-slides.html#plotting-the-residuals",
+    "title": "copenhagenR-April2024-slides",
+    "section": "Plotting the residuals",
+    "text": "Plotting the residuals\n\nSlight deviation from the blog post, where I plotted predicted v actual. Here I want to plot the residuals (actual minus predicted) against the actuals to check for heteroscedasticity (variance of errors not constant)."
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#plotting-the-residuals---kilojoules-model",
+    "href": "copenhagenR-April2024-slides.html#plotting-the-residuals---kilojoules-model",
+    "title": "copenhagenR-April2024-slides",
+    "section": "Plotting the residuals - Kilojoules model",
+    "text": "Plotting the residuals - Kilojoules model"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#plotting-the-residuals---watts-model",
+    "href": "copenhagenR-April2024-slides.html#plotting-the-residuals---watts-model",
+    "title": "copenhagenR-April2024-slides",
+    "section": "Plotting the residuals - Watts model",
+    "text": "Plotting the residuals - Watts model"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#about-that-last-ride",
+    "href": "copenhagenR-April2024-slides.html#about-that-last-ride",
+    "title": "copenhagenR-April2024-slides",
+    "section": "About that last ride…",
+    "text": "About that last ride…"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#about-that-last-ride-1",
+    "href": "copenhagenR-April2024-slides.html#about-that-last-ride-1",
+    "title": "copenhagenR-April2024-slides",
+    "section": "About that last ride…",
+    "text": "About that last ride…"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#about-that-last-ride-2",
+    "href": "copenhagenR-April2024-slides.html#about-that-last-ride-2",
+    "title": "copenhagenR-April2024-slides",
+    "section": "About that last ride…",
+    "text": "About that last ride…"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#about-that-last-ride-3",
+    "href": "copenhagenR-April2024-slides.html#about-that-last-ride-3",
+    "title": "copenhagenR-April2024-slides",
+    "section": "About that last ride…",
+    "text": "About that last ride…\n\n\n\n\n\nHave you seen this bike?\n\n\n\n\n\nVintage Univega, red…last seen in Nørrebro, near Nørrebro Station"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#section-8",
+    "href": "copenhagenR-April2024-slides.html#section-8",
+    "title": "copenhagenR-April2024-slides",
+    "section": "",
+    "text": "What questions do you have?"
+  },
+  {
+    "objectID": "copenhagenR-April2024-slides.html#section-9",
+    "href": "copenhagenR-April2024-slides.html#section-9",
+    "title": "copenhagenR-April2024-slides",
+    "section": "",
+    "text": "Thank you!\n\n\n\n https://www.gregdubrow.io/\n\n\n https://github.com/greg-dubrow\n\n\n https://www.linkedin.com/in/dubrowg/\n\n\n https://bsky.app/profile/gregerskjerulf.bsky.social"
   }
 ]
